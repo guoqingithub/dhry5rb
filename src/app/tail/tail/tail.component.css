@@ -1,0 +1,14 @@
+.all{
+    height: 100px;
+    width: 100%;
+    background:rgb(20, 112, 187);
+    color:white;
+  }
+
+div{
+    position: absolute;
+    margin-top: 10px;
+}
+.years{
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+<body style="margin-left: 50px;">
+
+    <a>时间：{{Txntime}}</a>
+<h1 style="margin-top: 30px;">支付</h1>
+<mat-divider style="width: 95%;"></mat-divider>
+
+<h4 style="margin-top: 30px; ">订单号: {{Orderid}}</h4>
+
+<h4 style="margin-top: 30px; ">金额: {{TxnAmt}} ￥</h4>
+
+<mat-divider style="width: 95%;"></mat-divider>
+<button mat-raised-button style="margin-top: 30px;" (click)="postorder1()">支付</button>
+<div id="payForm">
+
+</div>
+</body>

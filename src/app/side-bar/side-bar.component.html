@@ -1,0 +1,55 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="side" mode="side" opened>
+
+        <mat-expansion-panel >
+             <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 20px;font-weight:bold;">{{'your_profile'|translate}}</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                 <a mat-list-item [routerLink]="[ '/logandsec']" style="color:rgb(110, 109, 109);font-size: 15px;">{{'login_and_security'|translate}}</a>
+                 <a mat-list-item [routerLink]="[ '/information']" style="color:rgb(110, 109, 109);font-size: 15px;">{{'personal_information'|translate}}</a>
+            </mat-list>                         
+        </mat-expansion-panel>
+
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 60px;font-weight:bold;">Account Settings</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                <a style="color:rgb(110, 109, 109);font-size: 25px;">ACCOUNT & SECURITY</a> 
+                <br />
+                <br />
+                <HR>
+                <a mat-list-item [routerLink]="[ '/access']" style="color:rgba(110, 109, 109);font-size: 15px;">Account Access</a>
+                 <a mat-list-item [routerLink]="[ '/userdetail']" style="color:rgb(110, 109, 109);font-size: 15px;">Account Preference</a>
+                 <a mat-list-item [routerLink]="[ '/payment']" style="color:rgb(110, 109, 109);font-size: 15px;">Payment Preference</a>
+                 <br />
+                 <a style="color:rgb(110, 109, 109);font-size: 25px;">BUSINESS PROFILE</a> 
+                 <br />
+                <br />
+                <HR>
+                 <a mat-list-item [routerLink]="[ '/business']" style="color:rgb(110, 109, 109);font-size: 15px;">Business information</a>
+                 <a mat-list-item [routerLink]="[ '/owner']" style="color:rgb(110, 109, 109);font-size: 15px;">Owner information</a>
+                 <a mat-list-item [routerLink]="[ '/money']" style="color:rgb(110, 109, 109);font-size: 15px;">Money,Banks,Cards</a>
+                 <a mat-list-item [routerLink]="[ '/notifications']" style="color:rgb(110, 109, 109);font-size: 15px;">Notifications</a>
+                 <br />
+                 <a style="color:rgb(110, 109, 109);font-size: 25px;">PRODUCTS & SERVICES</a> 
+                 <br />
+                <br />
+                <HR>
+                 <a mat-list-item [routerLink]="[ '/invoices']" style="color:rgb(110, 109, 109);font-size: 15px;">Invoices</a>
+                 <a mat-list-item [routerLink]="[ '/shipping']" style="color:rgb(110, 109, 109);font-size: 15px;">Shipping</a>
+                 <a mat-list-item [routerLink]="[ '/home']" style="color:rgb(110, 109, 109);font-size: 15px;">home</a>
+            </mat-list>
+        </mat-expansion-panel>
+
+    </mat-drawer>
+
+
+     <mat-drawer-content  class="thecard" style="font-size: 13px;">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+
+
+</mat-drawer-container>

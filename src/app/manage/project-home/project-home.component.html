@@ -1,0 +1,147 @@
+<div class="container">
+    <div style="margin-top: 20px; margin-bottom: 20px;margin-left:10px">
+      <h2 >Project Home </h2>
+    </div> 
+<mat-card class="card"> 
+    <mat-card-title>All</mat-card-title>
+    <mat-card-subtitle class="sub">{{total}}</mat-card-subtitle>
+</mat-card>
+<mat-card class="card1"> 
+    <mat-card-title>Finished</mat-card-title>
+    <mat-card-subtitle class="sub1">{{finished}}</mat-card-subtitle>
+</mat-card>
+<mat-card class="card2"> 
+    <mat-card-title>Unfinished</mat-card-title>
+    <mat-card-subtitle class="sub2">{{unfinished}}</mat-card-subtitle>
+</mat-card>
+<mat-card class="card3"> 
+    <mat-card-title>Question</mat-card-title>
+    <mat-card-subtitle class="sub3">{{questioned}}</mat-card-subtitle>
+</mat-card>
+</div>
+
+<div class="container1">
+    <div style="margin-top: 20px; margin-bottom: 20px;">
+        <h2>Finished Tasks </h2>
+      </div>
+      <mat-divider></mat-divider>
+<table mat-table [dataSource]="dataSource">
+     
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- ProjectID Column -->
+    <ng-container matColumnDef="finishid">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element" class="font"> {{element.ID}} </td>
+    </ng-container>     
+    <!-- ProjectName Column -->
+    <ng-container matColumnDef="finishname">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element" class="na"  > {{element.Name}} </td>
+    </ng-container>
+    <!--Type Column -->
+    <ng-container matColumnDef="finishprogress">
+      <th mat-header-cell *matHeaderCellDef> Progress</th>
+      <td mat-cell *matCellDef="let element" class="pr"> {{element.Progress}}  </td>
+    </ng-container>
+   <!--CreatID Column -->
+   <ng-container matColumnDef="finishbegin">
+    <th mat-header-cell *matHeaderCellDef> Begin Time</th>
+    <td mat-cell *matCellDef="let element" class="be"  > {{element.Start}} </td>
+  </ng-container>
+  <!--CreatID Column -->
+  <ng-container matColumnDef="finishend">
+    <th mat-header-cell *matHeaderCellDef>End Time</th>
+    <td mat-cell *matCellDef="let element" class="en"  > {{element.End}} </td>
+  </ng-container>
+    <!-- Edit Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element" class="edit"  (click)="detail()"  >{{element.edit}}</td>
+    </ng-container>       
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row"></tr>
+  </table>
+  <div style="margin-top: 20px; margin-bottom: 20px;">
+    <h2>Unfinished Tasks </h2>
+  </div>
+  <mat-divider></mat-divider>
+  <table mat-table [dataSource]="dataSource1">
+     
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- ProjectID Column -->
+    <ng-container matColumnDef="unfinishid">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element" class="font"> {{element.id}} </td>
+    </ng-container>     
+    <!-- ProjectName Column -->
+    <ng-container matColumnDef="unfinishname">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element" class="na"  > {{element.name}} </td>
+    </ng-container>
+    <!--Type Column -->
+    <ng-container matColumnDef="unfinishprogress">
+      <th mat-header-cell *matHeaderCellDef> Progress</th>
+      <td mat-cell *matCellDef="let element" class="pr"> {{element.progress}}  </td>
+    </ng-container>
+   <!--CreatID Column -->
+   <ng-container matColumnDef="unfinishbegin">
+    <th mat-header-cell *matHeaderCellDef> Begin Time</th>
+    <td mat-cell *matCellDef="let element" class="be"  > {{element.start}} </td>
+  </ng-container>
+  <!--CreatID Column -->
+  <ng-container matColumnDef="unfinishend">
+    <th mat-header-cell *matHeaderCellDef>End Time</th>
+    <td mat-cell *matCellDef="let element" class="en"  > {{element.end}} </td>
+  </ng-container>
+    <!-- Edit Column -->
+    <ng-container matColumnDef="Edit">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element" class="edit"  (click)="detail()"  >{{element.edit}}</td>
+    </ng-container>       
+    <tr mat-row *matRowDef="let row; columns: displayedColumns1;" class="row"></tr>
+  </table>
+  
+  <div style="margin-top: 20px; margin-bottom: 20px;">
+    <h2>Questioned Tasks </h2>
+  </div>
+  <mat-divider></mat-divider>
+  <table mat-table [dataSource]="dataSource2">
+     
+    <!-- ProjectID Column -->
+    <ng-container matColumnDef="questionid">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element" class="font"> {{element.iD}} </td>
+    </ng-container>     
+    <!-- ProjectName Column -->
+    <ng-container matColumnDef="questionname">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element" class="na"  > {{element.namE}} </td>
+    </ng-container>
+    <!--Type Column -->
+    <ng-container matColumnDef="questionprogress">
+      <th mat-header-cell *matHeaderCellDef> Progress</th>
+      <td mat-cell *matCellDef="let element" class="pr"> {{element.progresS}}  </td>
+    </ng-container>
+   <!--CreatID Column -->
+   <ng-container matColumnDef="questionbegin">
+    <th mat-header-cell *matHeaderCellDef> Begin Time</th>
+    <td mat-cell *matCellDef="let element" class="be"  > {{element.starT}} </td>
+  </ng-container>
+  <!--CreatID Column -->
+  <ng-container matColumnDef="questionend">
+    <th mat-header-cell *matHeaderCellDef>End Time</th>
+    <td mat-cell *matCellDef="let element" class="en"  > {{element.enD}} </td>
+  </ng-container>
+    <!-- Edit Column -->
+    <ng-container matColumnDef="ediT">
+      <th mat-header-cell *matHeaderCellDef> edit </th>
+      <td mat-cell *matCellDef="let element" class="edit"  (click)="detail()"  >{{element.edit}}</td>
+    </ng-container>       
+    <tr mat-row *matRowDef="let row; columns: displayedColumns2;" class="row"></tr>
+  </table>
+</div>
+  
+    

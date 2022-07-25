@@ -1,0 +1,21 @@
+img{
+    position: absolute;
+    width:200px; /* 高度的一半 */
+    height:150px; /* 宽度的一半 */
+    margin-top: 80px;
+  }
+.content{
+    display:inline-block;
+}
+
+.img1{
+    display:inline-block;
+    margin-right: 200px;
+    margin-bottom: 100px;
+}
+.p1{
+    display:inline-block;
+    margin-left: 220px;
+    margin-bottom: 100px;
+    width: 100px;
+}

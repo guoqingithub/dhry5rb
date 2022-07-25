@@ -1,0 +1,55 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="side" mode="side" opened>
+    
+        <mat-expansion-panel >
+             <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 20px;font-weight:bold;">Manage Home</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                 <a mat-list-item [routerLink]="[ '/projecthome']" style="color:rgb(110, 109, 109);font-size: 15px;">Home</a>
+                
+            </mat-list>                         
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+             <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 20px;font-weight:bold;">Projects</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                 <a mat-list-item [routerLink]="[ '/projectlist']" style="color:rgb(110, 109, 109);font-size: 15px;">Project List</a>
+                 <a mat-list-item [routerLink]="[ '/projectdetail']" style="color:rgb(110, 109, 109);font-size: 15px;">Project Detail</a>
+                 <a mat-list-item [routerLink]="[ '/dialogprojectblank']" style="color:rgb(110, 109, 109);font-size: 15px;">Add Project</a>
+            </mat-list>                         
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+             <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 20px;font-weight:bold;">Tasks</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                 <a mat-list-item [routerLink]="[ '/tasklist']" style="color:rgb(110, 109, 109);font-size: 15px;">Task List</a>
+                 <a mat-list-item [routerLink]="[ '/taskdetail']" style="color:rgb(110, 109, 109);font-size: 15px;">Task Detail</a>
+                 <a mat-list-item [routerLink]="[ '/dialogtaskblank']" style="color:rgb(110, 109, 109);font-size: 15px;">Add Task</a>
+            </mat-list>                         
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+             <mat-expansion-panel-header>
+                <mat-panel-title style="color:black;font-size: 20px;font-weight:bold;">Users</mat-panel-title>
+             </mat-expansion-panel-header>
+            <mat-list>
+                 <a mat-list-item [routerLink]="[ '/projectuserlist']" style="color:rgb(110, 109, 109);font-size: 15px;">Project User List</a>
+                 <a mat-list-item [routerLink]="[ '/projectuserdetail']" style="color:rgb(110, 109, 109);font-size: 15px;">Project User Detail</a>
+                 <a mat-list-item [routerLink]="[ '/dialogprojectuser']" style="color:rgb(110, 109, 109);font-size: 15px;">Add Project User</a>
+                 <a mat-list-item [routerLink]="[ '/taskuserlist']" style="color:rgb(110, 109, 109);font-size: 15px;">Task User List</a>
+                 <a mat-list-item [routerLink]="[ '/taskuserdetail']" style="color:rgb(110, 109, 109);font-size: 15px;">Task User Detail</a>
+                 <a mat-list-item [routerLink]="[ '/dialogtaskuser']" style="color:rgb(110, 109, 109);font-size: 15px;">Add Task User</a>
+            </mat-list>                         
+        </mat-expansion-panel>
+    </mat-drawer>
+
+
+     <mat-drawer-content  class="thecard" style="font-size: 13px;">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+
+
+</mat-drawer-container>

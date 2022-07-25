@@ -1,0 +1,139 @@
+
+
+<mat-horizontal-stepper labelPosition="bottom" #stepper>
+  <mat-step [stepControl]="firstFormGroup"  [editable]="true">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>验证手机号</ng-template>
+      
+      <mat-form-field>
+        <mat-label>请输入手机号</mat-label>
+        <input matInput name="phone" type="text" id="phone" required maxlength="13"  formControlName="firstCtrl" [(ngModel)]= "this.user1.phonenumber" >
+        <!--(keyup)= 'onPhoneup($event)'; (keypress)= 'onPhonepress($event)'-->
+      
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>输入验证码</mat-label>
+        <input matInput required formControlName=" firstCtrl2" [(ngModel)]= "massage">
+      
+      </mat-form-field>
+      <button mat-button color="primary" (click)="sendMessage()">{{this.showButtonText}}</button>
+      <br>
+
+<!--
+      <mat-radio-group class="thecheck" [(ngModel)]= "labelPosition">
+        <mat-radio-button color="primary" value="after">邮箱注册</mat-radio-button>
+        <mat-radio-button color="primary" value="before" style="margin-left: 10px;">手机号注册</mat-radio-button>
+      </mat-radio-group>
+-->      
+      <mat-checkbox >我已阅读并同意《用户协议》</mat-checkbox>
+
+      <div>
+        <button mat-raised-button matStepperNext color="primary" class="continuebutton" >下一步</button>
+        <!-- <button mat-raised-button  color="primary"  (click)= "checkVerify()">验证</button> -->
+      </div>
+    </form>
+  </mat-step>
+
+
+
+  <mat-step [stepControl]="secondFormGroup" >
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>填写账号信息</ng-template>
+    
+      <mat-form-field>
+        <mat-label>昵称</mat-label>
+        <input matInput formControlName="secondCtrlnicheng" [(ngModel)]= "user1.username" >
+      </mat-form-field>
+
+      <small [hidden]="checkHasLogonIDBeenUsed">用户名已被使用</small>
+
+      <br>
+
+      <mat-form-field>
+        <mat-label>邮箱</mat-label>
+        <input matInput formControlName="secondCtrlyouxiang" [(ngModel)]= "user1.email" >
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>微信</mat-label>
+        <input matInput formControlName="secondCtrlweixin" [(ngModel)]= "user1.wechat" >
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>姓</mat-label>
+        <input matInput formControlName="secondCtrlxing" [(ngModel)]= "user1.firstname" >
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>名</mat-label>
+        <input matInput formControlName="secondCtrlming" [(ngModel)]= "user1.lastname"  >
+      </mat-form-field>
+<br>
+<mat-form-field>
+  <mat-label>国家</mat-label>
+  <input matInput formControlName="secondCtrlguojia"  >
+</mat-form-field>
+<br>
+
+<mat-form-field>
+  <mat-label>省/洲</mat-label>
+  <input matInput formControlName="secondCtrlshengzhou"  >
+</mat-form-field>
+<br>
+<mat-form-field>
+  <mat-label>城市</mat-label>
+  <input matInput formControlName="secondCtrlchengshi"  >
+</mat-form-field>
+<br>
+
+<mat-form-field>
+  <mat-label>街道</mat-label>
+  <input matInput formControlName="secondCtrljiedao" >
+</mat-form-field>
+<br>
+
+      <mat-form-field>
+        <mat-label>角色</mat-label>
+        <input matInput formControlName="secondCtrljuese" [(ngModel)]= "user1.role" >
+      </mat-form-field>
+<br>  
+    
+      <mat-form-field>
+        <mat-label>密码</mat-label>
+        <input matInput formControlName="secondCtrlmima" type="password" [(ngModel)]= "user1.password">
+          <!-- (keyup)="passwordlength()" required minlength="8" maxlength="20" pattern='^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$'> -->
+        
+      </mat-form-field>
+      <small *ngIf= "flag1" style="color: red;">!!! 密码必须大于八位</small>
+
+<br>
+      <mat-form-field>
+        <mat-label>确认密码</mat-label>
+        <input matInput formControlName="secondCtrlquerenmima" type="password" [(ngModel)]= "user1.confirmPassword">
+        <!-- (keyup)="passwordsame()" required minlength="8" maxlength="20" pattern='^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$'> -->
+       
+      </mat-form-field>
+
+        <small *ngIf= "flag2" style="color: red;">!!! 两次输入密码不一致</small>
+      <div>
+        <button mat-raised-button color="primary" (click)= "finalregistration()">注册</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+
+
+  <mat-step>
+    <ng-template matStepLabel>完成注册</ng-template>
+    <div class="tips1"style="color:rgb(124, 124, 126)">请完整步骤1-2的注册填写</div>
+    <div>
+    
+      <button mat-raised-button color="primary" (click)="stepper.reset()">重置</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

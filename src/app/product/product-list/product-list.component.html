@@ -1,0 +1,19 @@
+<div style="width:90%;margin-top: 50px;margin-left: 5%;">
+
+    <mat-grid-list cols="3" gutterSize="20px" rowHeight="1:0.5">
+        <mat-grid-tile *ngFor="let product of Products" style="border: 1px solid rgb(216, 216, 216);"
+            onmouseover="this.style.borderColor='rgb(20, 112, 187)'"
+            onmouseout="this.style.borderColor='rgb(216, 216, 216)'" (click)="OpenProductDetail()">
+
+            <mat-grid-tile-header style="height:20px">id:{{product.id}}</mat-grid-tile-header>
+            <div class="content">
+                <div class="img1"><img src={{product.imgUrl}}></div>
+                <div class="p1">
+                    <p>商品简介：{{product.content}}</p>
+                </div>
+            </div>
+            <mat-grid-tile-footer style="height:30px">price:{{product.price}}</mat-grid-tile-footer>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</div>

@@ -1,0 +1,47 @@
+button{
+    color:rgb(20, 112, 187); 
+    font-weight:bold;
+
+    margin-top: -6px;
+    position:absolute;
+    left:700px;
+
+
+    font-size: 10px;
+}
+h3{
+   margin-top: 30px;
+   margin-left: 50px;
+   margin-bottom: 30px;
+}
+div{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+
+    font-size: 10px;
+}
+.content{
+    position: absolute;
+    left:300px;
+
+    
+}
+.button1{
+    color:rgb(20, 112, 187); 
+    font-weight:bold;
+
+    margin-top: 15px;
+    position:absolute;
+    left:40px;
+
+
+    font-size: 10px;
+}
+.mat-divider{
+    margin-top: 30px;
+
+    margin-left: 40px;
+
+    margin-right: 40px;
+}

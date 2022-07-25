@@ -1,0 +1,71 @@
+<div class="container">
+    <div style="margin-top: 20px; margin-bottom: 20px;margin-left:10px">
+      <h2>Task Detail  <mat-icon class="addicon"  >add_circle</mat-icon></h2>
+    </div>   
+  <mat-divider></mat-divider>
+      <mat-list>
+         <mat-list-item>
+            <span style="font-weight: 500; margin-top: 40px; margin-bottom: 20px;margin-right: 40px;">ID</span> 
+            <span style="word-break: break-all;margin-top: 40px; margin-bottom: 20px;" class="show">{{ID}}</span>
+          </mat-list-item>
+            <button  style="border: none;" class="update1" (click)=update() >Update</button>
+            <mat-divider></mat-divider>
+         <mat-list-item>
+            <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">ProjectID</span>
+            <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{ProjectID}}</span>     
+         </mat-list-item>
+         <button  style="border: none;" class="update1" (click)=update4() >Update</button>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+               <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">Task Name</span>
+               <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{Name}}</span>      
+            </mat-list-item>
+            <button  style="border: none;" class="update1" (click)=update1() >Update</button>
+
+            <mat-divider></mat-divider>
+            <mat-list-item>
+            <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">Progress</span>
+            <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{Progress}}</span>
+         </mat-list-item>
+         <button  style="border: none;" class="update1"  (click)=update2() >Update</button>
+         
+         <mat-divider></mat-divider>
+         <mat-list-item>
+            <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">State</span>
+            <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{State}}</span>
+         </mat-list-item>
+         <button  style="border: none;" class="update1" (click)=update3() >Update</button>
+   
+         <mat-divider></mat-divider>
+         <mat-list-item>
+            <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">Begin Time</span>
+            <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{BeginTime}}</span>     
+         </mat-list-item>
+         <button  style="border: none;" class="update1" (click)=update6() >Update</button>
+
+         <mat-divider></mat-divider>
+         <mat-list-item>
+           <span style="font-weight: 500;margin-top: 45px; margin-bottom: 15px; margin-right: 10px;">End Time</span>
+           <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px" class="show">{{EndTime}}</span> 
+        </mat-list-item>
+        <button  style="border: none;" class="update1" (click)=update7() >Update</button> 
+        <mat-divider></mat-divider>
+        <mat-list-item>
+           <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">Description</span>
+           <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{Description}}</span>     
+        </mat-list-item>
+        <button  style="border: none;" class="update1" (click)=update8() >Update</button>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+           <span style="font-weight: 500; margin-top: 45px; margin-bottom: 15px;margin-right: 10px;">Note</span>
+           <span style="word-break: break-all;margin-top: 45px; margin-bottom: 15px;" class="show">{{Note}}</span>     
+        </mat-list-item>
+        <button  style="border: none;" class="update1" (click)=update9() >Update</button>
+ <mat-divider></mat-divider>
+ <button mat-stroked-button class="button" (click)="Puttask()" >Save Task</button>
+ <button mat-stroked-button class="button"style="margin-left: 5px;">Cancel</button>
+      </mat-list>
+   
+
+</div>
+

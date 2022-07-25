@@ -1,0 +1,52 @@
+.body{
+    background-color:rgb(196, 139, 111);
+    margin: 0px !important;
+
+    
+}
+.title{
+    font-size: 30px;
+    color:white;
+  
+    font-family:'Microsoft YaHei';
+    font-weight:600;
+
+    margin-top: 30px;
+    background-color:rgb(20, 112, 187);
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+}
+
+.login{
+    margin-left: 10px;
+}
+
+.aaa{
+    width: 30%;
+}
+
+.manage{
+  margin-left:250px;
+}
+.regeisterbutton{
+  
+}
+/* 下拉菜单的样式表------------------*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/* 下拉菜单的样式表--------------------*/

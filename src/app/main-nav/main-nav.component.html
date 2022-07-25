@@ -1,0 +1,90 @@
+<body style="background-color:rgb(20, 112, 187)">
+    
+    <div>
+
+        <!--1 左上方的Logo，点击回到主页home-->
+        <a><button mat-button class="title" [routerLink]="[ '/home']">3droplets</button></a>
+
+        <a><div class="dropdown">
+            <button mat-button style="color: white">{{'Service' | translate}}</button>
+            
+            <div class="dropdown-content">
+                <button mat-button style="color:black">Serve you in eCommerce</button>
+                <mat-divider></mat-divider>
+                <button mat-button style="color:black">Build Website</button>
+                <button mat-button style="color:black">Build Mobile App</button>
+                <button mat-button style="color:black">App in-App Messaging</button>
+                <button mat-button style="color:black">App in-App Vedio Call</button>
+                <button mat-button style="color:black">App in-App Purchase</button>
+            </div>
+          </div></a>
+
+        <a><div class="dropdown">
+            <button mat-button style="color: white" [routerLink]="[ '/product-list']">{{'Product'|translate}}</button>
+            <div class="dropdown-content">
+                <button mat-button style="color:black"  [routerLink]="[ '/upload-product']">Make it your own</button>
+                <mat-divider></mat-divider>
+                <button mat-button style="color:black" [routerLink]="[ '/ebarter']">eBarter</button>
+                <button mat-button style="color:black" [routerLink]="[ '/ebarter']">SWOTS</button>
+                <button mat-button style="color:black" [routerLink]="[ '/really-fresh']">PeallFresh</button>
+                <button mat-button style="color:black" [routerLink]="[ '/ebarter']">RTC</button>
+                <button mat-button style="color:black" [routerLink]="[ '/ebarter']">3D.Framework</button>
+            </div>
+          </div></a>
+
+        <a><button class="product" mat-button style="color: white" [routerLink]="[ '/price']">{{'Pricing'| translate}}</button></a>
+
+        <!-- <a><button class="product" mat-button style="color: white" [routerLink]="[ '/upload-product']">上架产品</button></a> -->
+
+        <a class="manage"><div class="dropdown">
+            <button mat-button style="color: white" [routerLink]="[ '/side-bar']">{{'Manage'| translate}}</button>
+            <div class="dropdown-content">
+                <button mat-button style="color:black">Manage yours</button>
+                <mat-divider></mat-divider>
+                <button mat-button style="color:black">Payments</button>
+                <button mat-button style="color:black">Subscriptions</button>
+                <button mat-button style="color:black">Interacting</button>
+                <button mat-button style="color:black">Monitoring</button>
+                <button mat-button style="color:black">Tracing</button>
+            </div>
+          </div></a>
+
+        <!--2 变化的Login和Logout-->
+        <a><button class="login">
+            <div *ngIf= "!isLogin;else noLogin">
+               <button mat-button (click)= "openDialog()">
+                   {{'login'| translate}}
+               </button>
+              
+            </div>
+            <ng-template #noLogin>
+                <button mat-button (click)= "Logout()">
+                <div>
+                    <span>Hi,{{username}}</span>
+                    <span style="margin-left: 10px;margin-right: 10px;">|</span>
+                    <span>{{'logout' | translate}}</span>
+                </div>
+                </button>
+            </ng-template>
+            </button>
+        </a> 
+
+
+        
+        
+        
+        <!--3 注册-->
+        <a class="regeisterbutton"><button mat-button style="color: white" (click)= "openDialog1()">{{'register' | translate}}</button></a>
+        <a><button (click)="changeLanguage(language)">{{ languageBtn}}</button></a>
+    </div>
+    
+   
+   <!--
+   <button mat-raised-button (click)= "getdata()">get获取用户数据</button>
+   
+   <button mat-raised-button (click)= "getdata1()">get获取所有商品</button>-->
+   
+ 
+   </body>
+   
+   

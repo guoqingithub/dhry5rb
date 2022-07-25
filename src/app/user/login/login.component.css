@@ -1,0 +1,19 @@
+.mat-form-filed{
+    align-items: center;
+}
+.head{
+    position: relative;
+    margin-top: 70px;
+    font-weight: 700;
+    
+}
+.button1{
+    width: 400px;
+}
+.inputt{
+    margin-top: 40px;
+    
+}
+.example-form-field{
+    width: 100%;
+}

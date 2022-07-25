@@ -1,0 +1,28 @@
+<h1 class="head" mat-dialog-title>{{'login' | translate }} </h1>
+<p>{{'Login_with_account_and_password' | translate}}</p>
+
+<div></div>
+
+<div class="inputt" mat-dialog-content>
+<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-form-field">
+    <mat-label>用户名</mat-label> 
+    <input  matInput name='uesrname' formControlName="usernameCtr" [(ngModel)] = "username">
+  </mat-form-field>
+<br>
+  <mat-form-field class="example-form-field">
+    <mat-label>密码</mat-label>
+    <input  matInput name='password' formControlName="passwordCtr"  [(ngModel)] ="password">
+  </mat-form-field>
+  <!-- <mat-form-field class="example-form-field">
+    <mat-checkbox name='remember' type="mat-checkbox" formControlName="rememberCtr">记住密码 </mat-checkbox >
+  </mat-form-field> -->
+  <!-- <mat-checkbox name='remember' type="mat-checkbox" formControlName="rememberCtr">记住密码 </mat-checkbox > -->
+  <br>
+    <button mat-raised-button color="primary" [disabled]="!loginFormGroup.valid"(click)='IfSignIn()'>登录</button>
+</form>
+</div>
+<div class="button1" mat-dialog-actions>
+  <!-- <button  mat-raised-button color="primary" (click)= "aaa()">token</button> -->
+  <small *ngIf= "unlogintips" style="color: red;margin-left: 50px;">用户名或密码错误</small>
+</div>

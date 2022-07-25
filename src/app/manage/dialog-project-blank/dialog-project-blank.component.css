@@ -1,0 +1,211 @@
+.container{
+    padding: 10px;
+    width:950px;
+    margin-left: 10px;
+}
+
+
+.addicon{
+    color:	#87CEFA; 
+    float: left;
+    cursor:pointer;
+    margin-right: 10px;
+}
+
+.clearicon{
+  float: right; 
+  color: black;
+  cursor:pointer;
+}
+
+.input0
+{
+height:25px;
+border-radius:4px;
+outline:none;
+border-top-style: groove;
+border-right-style: groove;
+border-bottom-style: groove;
+border-left-style: groove;
+border:1px solid #941414;
+}
+
+.input
+{
+height:200px;
+margin-top: 60px;
+border-radius:4px;
+outline:none;
+border-top-style: groove;
+border-right-style: groove;
+border-bottom-style: groove;
+border-left-style: groove;
+border:1px solid #943737;
+
+}
+
+.name {
+    width: 400px;
+    height: 25px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    margin-left: 200px;
+    text-indent: 10px;
+   
+  }
+
+.name1 {
+    width: 400px;
+    height: 25px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    text-indent: 10px;
+   
+  }
+.snackBar{
+
+width: 20px;
+
+}
+
+.image{
+  border-style:groove;
+  border-color:#F0FFFF;
+  width: 200px;
+  height: 190px;
+  position: absolute;
+  top: 25px;
+  left: 540px;
+} 
+
+.image .uploadimgremove {
+  position: absolute;
+  top:5px;
+  right:5px;
+  color: #00BFFF;
+}
+
+.img3{
+  width: 200px;
+  height: 190px;
+}
+
+
+.image1{
+  border-style:groove;
+  border-color:#F0FFFF;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  top: 15px;
+  left: 540px;
+}
+
+.img1{
+  width: 200px;
+  height: 150px;
+}
+
+
+.image2{
+  border-style:groove;
+  border-color:#F0FFFF;
+  width: 200px;
+  height: 170px;
+  position: absolute;
+  top: 25px;
+  left: 540px;
+}
+
+.image2 .uploadimgremove {
+  position: absolute;
+  top:5px;
+  right:5px;
+  color: black;
+}
+
+.img2{
+  width: 200px;
+  height: 170px;
+}
+
+.button{
+  color:#00BFFF;
+  border: 1px solid #00BFFF; 
+  margin-top: 15px;
+  width: 140px;
+  border-radius: 8px;
+  margin-left: 610px;
+}
+.title{
+    margin-top: 15px;
+  width: 140px;
+  
+}
+.typeinfo{
+  margin-top:20px;
+  visibility:visible;
+}
+
+/* .container{
+    width: 850px;
+  
+    
+} */
+.content{
+   
+    width: 800px;
+    height:690px;
+    overflow-y: hidden;
+}
+
+
+ .content:hover{
+    overflow-y: auto;
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+  } /* 滚动条的内层滑轨背景颜色 */
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: #fff;
+  } /* 滚动条的外层滑轨背景颜色 */
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d4d8e2;
+  } /* 滚动条的内层滑块颜色 */
+
+  .scrollbar::-webkit-scrollbar-button {
+    background-color: #fff;
+    display: none;
+  } /* 滑轨两头的监听按钮颜色 */
+  .mat-divider{
+    margin-top: 30px;
+
+    margin-left: 10px;
+
+    margin-right: 40px;
+}
+span{
+   
+        width: 100px;
+        text-align: left;
+        display: inline-block;
+  
+
+}

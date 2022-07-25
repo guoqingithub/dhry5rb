@@ -1,0 +1,40 @@
+
+.container{
+    padding: 10px;
+    width:950px;
+    margin-left: 10px;
+    
+  }
+
+  .addicon{
+    color:	#87CEFA; 
+    float: right;
+    cursor:pointer;
+  } 
+
+  .font{
+    font-weight: 590;
+  }
+  .id{
+    
+    margin-left:40px;
+  }
+  .info{
+    margin-left:20px;
+  }
+  .in{
+    margin-left:20px;
+  }
+  .edit{
+    color:#00008B;
+    cursor:pointer;
+  }
+
+  .row{
+    height: 100px;
+  }
+
+  table {
+    width: 100%;
+    }
+    

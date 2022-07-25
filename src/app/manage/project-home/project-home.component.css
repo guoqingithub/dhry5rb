@@ -1,0 +1,94 @@
+.container{
+    padding: 10px;
+    width:500px;
+    margin-left: 10px;
+}
+.container1{
+    padding:200px;
+    width:1000px;
+    height:150px ;
+    margin-left:-180px;
+}
+.card{
+   background-color: rgb(247, 247, 247);
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+   position: absolute;
+
+}
+.card1{
+    background-color: rgb(247, 247, 247);
+     width: 200px;
+     height: 100px;
+     margin-left: 260px;
+     position: absolute;
+     
+ }
+ .card2{
+    background-color: rgb(247, 247, 247);
+     width: 200px;
+     height: 100px;
+     margin-left: 510px;
+     position: absolute;
+ }
+ .card3{
+    background-color: rgb(247, 247, 247);
+     width: 200px;
+     height: 100px;
+     margin-left: 760px;
+     position: absolute;
+ }
+ .sub{
+     color:crimson;
+     font-size: 40px;
+ }
+ .sub1{
+    color:royalblue;
+    font-size: 40px;
+}
+.sub2{
+    color:turquoise;
+    font-size: 40px;
+}
+.sub3{
+    color:sandybrown;
+    font-size: 40px;
+}
+.mat-divider{
+    margin-top: 19px;
+    margin-bottom: px;
+    margin-left: 10px;
+
+    margin-right: 40px;
+}
+.font{
+    font-weight: 590;
+  }
+  .na{
+    
+    margin-left:2px;
+  }
+  .pr{
+    margin-left:20px;
+  }
+  .be{
+    margin-left:2px;
+    margin-right: 25px;
+  }
+  .en{
+    margin-left:24px;
+  }
+  .edit{
+    color:#00008B;
+    cursor:pointer;
+  }
+
+  .row{
+    height: 100px;
+  }
+
+  table {
+    width: 100%;
+    }
+    
